@@ -1,18 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:padding="10dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="#11111000"
+        android:hint="User Name"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_marginTop="50dp"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="#11111000"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/username"/>
+
+    <EditText
+        android:id="@+id/confirm"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="#11111000"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/password"/>
+
+    <Button
+        android:id="@+id/buttonSignin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/confirm"/>
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Existing user! Go to Sign in page"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/buttonSignin"/>
+
+</RelativeLayout>
