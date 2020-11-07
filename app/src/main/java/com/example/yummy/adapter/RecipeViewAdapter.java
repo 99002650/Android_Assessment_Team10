@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.yummy.DetailsActivity;
 import com.example.yummy.R;
 import com.example.yummy.RecipeData;
-//import com.example.yummy.ThirdActivity;
+import com.example.yummy.ThirdActivity;
 
 public class RecipeViewAdapter extends RecyclerView.Adapter<RecipeViewAdapter.ViewHolder> {
 
@@ -39,14 +39,13 @@ public class RecipeViewAdapter extends RecyclerView.Adapter<RecipeViewAdapter.Vi
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final RecipeData recipeDataList = recipeData[position];
         holder.textViewData.setText(recipeDataList.getData());
-        //holder.textViewQuantity.setText(recipeDataList.getQuantity());
-        //holder.textViewMethod.setText(recipeDataList.getMethod());
+
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(context, ThirdActivity.class);
-//                context.startActivity(intent);
+                Intent intent = new Intent(context, ThirdActivity.class);
+                context.startActivity(intent);
 
             }
         });
@@ -59,15 +58,11 @@ public class RecipeViewAdapter extends RecyclerView.Adapter<RecipeViewAdapter.Vi
 
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        //TextView textViewMethod;
         TextView textViewData;
-        //TextView textViewQuantity;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-//            movieImage = itemView.findViewById(R.id.imageview);
             textViewData = itemView.findViewById(R.id.cardMethod);
-            //textViewQuantity = itemView.findViewById(R.id.ingdQuantity);
 
         }
     }
